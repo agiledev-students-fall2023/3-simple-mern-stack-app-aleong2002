@@ -15,7 +15,7 @@ To complete this exercise:
 When you have completed the exercise, leave your local copy of the app running, enter the public link to it here, and push your code changes to GitHub:
 
 ```
-http://replace-with-your-ngrok-public-https-link
+https://8c6c-216-165-95-188.ngrok-free.app/
 ```
 
 ## How to launch the app
@@ -34,7 +34,7 @@ http://replace-with-your-ngrok-public-https-link
 
 The back-end code will integrate with this database. However, it may be occasionally useful interact with the database directly from the command line:
 
-- connect to the database server from the command line: `docker exec -ti mongodb_dockerhub mongo -u admin -p secret`
+- connect to the database server from the command line: `docker exec -ti mongodb_dockerhub mongosh -u admin -p secret`
 - show the available databases: `show dbs`
 - select the database used by this app: `use example-mern-stack-app`
 - show the documents stored in the `messages` collection: `db.messages.find()` - this will be empty at first, but will later be populated by the app.
@@ -56,14 +56,14 @@ If you have trouble running Docker on your computer, use a database hosted on [M
 ### Visit the web app in your web browser
 
 - install [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-- navigate your web browser to http://localhost:3000
+- navigate your web browser to http://localhost:7002
 
 ### Let others view your app
 
 When running locally on your machine, others can't access the app. To give temporary access to others to run the app on your machine:
 
 - install [ngrok](https://ngrok.com/download)
-- run the command, `ngrok http 4000`
+- run the command, `ngrok http 7002 `
 
 ngrok will then spit out a temporary URL that you can share with others to give them access to the app running on your machine
 
